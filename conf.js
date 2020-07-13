@@ -11,7 +11,6 @@ exports.config = {
   framework: 'jasmine',
 
   suites: {
-    disable: './specs/disable_angular.js',
     nested_frames: './specs/nested_frames.js',
     dynamic_loading: './specs/dynamic_loading.js',
     upload: './specs/upload.js'
@@ -20,5 +19,11 @@ exports.config = {
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000
+  },
+
+  onPrepare() {
+    beforeEach(function(){
+      browser.waitForAngularEnabled(false);
+    });
   }
 };
