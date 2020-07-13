@@ -1,9 +1,5 @@
 var nestedFramesPage = function() {
     var frame = element(by.tagName('body'));
-
-    this.disableAngular = function () {
-        browser.waitForAngularEnabled(false);
-    };
   
     this.get = function() {
         browser.get('http://the-internet.herokuapp.com/nested_frames');

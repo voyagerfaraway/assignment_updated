@@ -11,9 +11,10 @@ exports.config = {
   framework: 'jasmine',
 
   suites: {
-    nested_frames: 'nested_frames.js',
-    dynamic_loading: 'dynamic_loading.js',
-    upload: 'upload.js'
+    disable: './specs/disable_angular.js',
+    nested_frames: './specs/nested_frames.js',
+    dynamic_loading: './specs/dynamic_loading.js',
+    upload: './specs/upload.js'
   },
 
   // Options to be passed to Jasmine.

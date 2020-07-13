@@ -1,14 +1,7 @@
 var dynamicLoadingPage = function() {
-
     var startButton = element(by.id('start')).element(by.tagName('button'));
-
     var finalText = element(by.id('finish')).element(by.tagName('h4'));
-
     var EC = browser.ExpectedConditions;
-
-    this.disableAngular = function () {
-        browser.waitForAngularEnabled(false);
-    };
   
     this.getFirst = function() {
         browser.get('http://the-internet.herokuapp.com/dynamic_loading/1');

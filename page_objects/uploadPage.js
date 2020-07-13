@@ -1,14 +1,7 @@
 var uploadPage = function() {
-
     var path = require('path');
-
     var successfulUpload = element(by.id('content')).element(by.tagName('h3'));
-
     var fileName = element(by.id('uploaded-files'));
-
-    this.disableAngular = function () {
-        browser.waitForAngularEnabled(false);
-    };
   
     this.get = function() {
         browser.get('http://the-internet.herokuapp.com/upload');
