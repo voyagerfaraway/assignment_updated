@@ -1,6 +1,8 @@
 var dynamicLoadingPage = function() {
     var startButton = element(by.id('start')).element(by.tagName('button'));
     var finalText = element(by.id('finish')).element(by.tagName('h4'));
+    var loadingText = element(by.id('loading'));
+    var loadingPic = element(by.id('content')).element(by.tagName('img'));
     var EC = browser.ExpectedConditions;
   
     this.getFirst = function() {
@@ -21,6 +23,14 @@ var dynamicLoadingPage = function() {
 
     this.getHelloWorldText = function() {
         return finalText.getText();
+      };
+
+    this.getLoadingText = function() {
+        return loadingText.getText();
+      };
+
+    this.getImage = function() {
+        return loadingPic;
       };
   };
   module.exports = new dynamicLoadingPage();
